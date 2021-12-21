@@ -4,10 +4,14 @@ import { task } from "hardhat/config";
 import path from "path";
 
 task(
-  "function-signature",
+  "function-signatures",
   "Get function signatures for Contracts",
   async (taskArgs, hre) => {
-    const files = getFiles(path.join(hre.config.paths.artifacts, "contracts"));
+    const contractLocation = hre.config.paths.sources;
+    console.log(contractLocation);
+    const files = getFiles(
+      path.join(hre.config.paths.artifacts, path.basename(contractLocation))
+    );
     const source = path.basename(hre.config.paths.sources);
     for (const file of files) {
       const abiPath = path.join(hre.config.paths.artifacts, source, file);
@@ -21,8 +25,8 @@ task(
           [path.basename(file)]: key,
           Signature: sigHash,
         });
-        console.table(funcSigs);
       }
+      console.table(funcSigs);
     }
   }
 );
