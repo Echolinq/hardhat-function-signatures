@@ -1,6 +1,6 @@
 {
   "name": "hardhat-function-signatures",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Gets Ethereum function signatures for all contracts",
   "repository": "https://github.com/Echolinq/hardhat-function-signatures",
   "author": "echolinq",

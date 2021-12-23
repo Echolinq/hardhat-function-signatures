@@ -41,3 +41,15 @@ function-signatures: Get function signatures for Contracts
 
 ```
 
+## Example
+```
+$ npx hardhat function-signatures
+
+┌─────────┬───────────────────────┬──────────────┐
+│ (index) │     Greeter.json      │  Signature   │
+├─────────┼───────────────────────┼──────────────┤
+│    0    │       'greet()'       │ '0xcfae3217' │
+│    1    │ 'setGreeting(string)' │ '0xa4136862' │
+└─────────┴───────────────────────┴──────────────┘
+
+```

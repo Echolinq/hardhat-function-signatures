@@ -8,7 +8,6 @@ task(
   "Get function signatures for Contracts",
   async (taskArgs, hre) => {
     const contractLocation = hre.config.paths.sources;
-    console.log(contractLocation);
     const files = getFiles(
       path.join(hre.config.paths.artifacts, path.basename(contractLocation))
     );
